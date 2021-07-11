@@ -1,11 +1,11 @@
 <?php  
-session_start();  
-if(!isset($_SESSION["user"]))
-{
- header("location:index.php");
-}
+    session_start();  
+    if(!isset($_SESSION["user"]))
+    {
+    header("location:index.php");
+    }
 
-ob_start();
+    ob_start();
 ?>
 
 <!DOCTYPE html>
@@ -190,7 +190,6 @@ ob_start();
 
                     </div>
                 </div>
-                <!-- end of table customer -->
 
             </div>
         </div>

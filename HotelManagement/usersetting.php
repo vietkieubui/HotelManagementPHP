@@ -57,13 +57,9 @@ ob_start();
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
-
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -72,14 +68,8 @@ ob_start();
                         <a class="active-menu" href="usersetting.php"><i class="fas fa-tachometer-alt"></i> User
                             Dashboard</a>
                     </li>
-
-
-
-
             </div>
-
         </nav>
-        <!-- /. NAV SIDE  -->
 
         <div id="page-wrapper">
             <div id="page-inner">
@@ -93,7 +83,6 @@ ob_start();
 
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- Advanced Tables -->
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="table-responsive">
@@ -141,7 +130,6 @@ ob_start();
 
                             </div>
                         </div>
-                        <!--End Advanced Tables -->
                         <div class="panel-body">
                             <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal1">
                                 Add New Admin
@@ -207,17 +195,7 @@ ob_start();
                 </div>
             </div>
         </div>
-
-        <!-- /. ROW  -->
-
-
-
-
-        <!-- /. PAGE INNER  -->
     </div>
-    <!-- /. PAGE WRAPPER  -->
-    </div>
-    <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
@@ -227,8 +205,6 @@ ob_start();
     <script src="assets/js/jquery.metisMenu.js"></script>
     <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
-
-
 </body>
 
 </html>

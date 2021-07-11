@@ -35,7 +35,6 @@ ob_start();
 </head>
 
 <body>
-    <!-- wrapper -->
     <div id="wrapper" style="height: auto; content: auto">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -63,12 +62,9 @@ ob_start();
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -90,14 +86,11 @@ ob_start();
                     <li>
                         <a href="billdetail.php"><i class="fas fa-money-bill"></i> Bill details</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </nav>
-        <!-- từ đây trở lên là phần chung tất cả các trang chú ý class active-menu-->
-        <!-- /. NAV SIDE  -->
-        <!-- đây là phần body chính -->
-        <div id="page-wrapper" >
+        <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
@@ -106,7 +99,6 @@ ob_start();
                         </h1>
                     </div>
                 </div>
-                <!-- form điền thông tin -->
                 <div class="row">
                     <div class="col-md-5 col-sm-5">
                         <div class="panel panel-primary">
@@ -243,7 +235,6 @@ ob_start();
                             </div>
                         </div>
                     </div>
-                    <!-- hết form booking -->
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="panel panel-primary">
@@ -255,23 +246,23 @@ ob_start();
                                     </a>
                                 </div>
 
-                                
-                                    <div class="panel panel-default">
-                                        <div class="panel-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-bordered table-hover"
-                                                    id="dataTables-example">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>ADD</th>
-                                                            <th>ID</th>
-                                                            <th>Customer Name</th>
-                                                            <th>ID Card</th>
-                                                            <th>Phone Number</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <?php                             
+
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover"
+                                                id="dataTables-example">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ADD</th>
+                                                        <th>ID</th>
+                                                        <th>Customer Name</th>
+                                                        <th>ID Card</th>
+                                                        <th>Phone Number</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php                             
                                             $tsql = "SELECT `customerID`, `customerName`, `idCard`, `phoneNumber` FROM `customer`";
                                             $tresult = mysqli_query($conn,$tsql);
                                             while($trow=mysqli_fetch_array($tresult) )
@@ -290,14 +281,13 @@ ob_start();
                                             }
                                         
 									?>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
+                                                </tbody>
+                                            </table>
                                         </div>
+
                                     </div>
-                                    <!-- end of table customer -->
-                                
+                                </div>
+
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" style="max-height:500px;min-height=300px">
@@ -305,27 +295,25 @@ ob_start();
                                 <div class="panel-heading">
                                     READY ROOMS INFORMATION
                                 </div>
-                                
-                                    <!-- table room -->
-                                    <div class="panel panel-default">
-                                        <div class="panel-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-bordered table-hover"
-                                                    id="dataTables-example1">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>ADD</th>
-                                                            <th>ID</th>
-                                                            <th>Type</th>
-                                                            <th>Bedding</th>
-                                                            <th>Price</th>
-                                                            <th>Status</th>
-                                                            <th>Note</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover"
+                                                id="dataTables-example1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ADD</th>
+                                                        <th>ID</th>
+                                                        <th>Type</th>
+                                                        <th>Bedding</th>
+                                                        <th>Price</th>
+                                                        <th>Status</th>
+                                                        <th>Note</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
 
-                                                        <?php                                    
+                                                    <?php                                    
                                         $sql = "select * from room where status='ready'";
                                         $result = mysqli_query($conn,$sql);                                    
 										while($row= mysqli_fetch_array($result))
@@ -347,18 +335,13 @@ ob_start();
 											    </tr>";
 										}
 									?>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                    <!-- end of table Room -->
-                                
-
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -382,15 +365,15 @@ ob_start();
             <script>
             $(document).ready(function() {
                 $('#dataTables-example').dataTable({
-                    "lengthMenu": [ 3, 10, 25, 50, 75, 100 ]
+                    "lengthMenu": [3, 10, 25, 50, 75, 100]
                 });
             });
             </script>
             <script>
             $(document).ready(function() {
-                $('#dataTables-example1').dataTable({                    
-                    "lengthMenu": [ 5, 10, 25, 50, 75, 100 ],
-                    "language":{
+                $('#dataTables-example1').dataTable({
+                    "lengthMenu": [5, 10, 25, 50, 75, 100],
+                    "language": {
                         "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Vietnamese.json"
                     }
                 });
@@ -420,9 +403,10 @@ ob_start();
                 }
             }
 
-            function add_customerID_to_form(customerID){
+            function add_customerID_to_form(customerID) {
                 document.getElementById('customerID').value = customerID;
             }
+
             function add_roomid_to_form(roomid) {
                 var room_input = document.getElementById('room').value;
                 if (room_input == "") {

@@ -56,13 +56,9 @@ if(!isset($_SESSION["user"]))
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
-
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -79,8 +75,6 @@ if(!isset($_SESSION["user"]))
             </div>
 
         </nav>
-        <!-- /. NAV SIDE  -->
-
 
 
         <div id="page-wrapper">
@@ -185,7 +179,6 @@ if(!isset($_SESSION["user"]))
                                     ROOMS INFORMATION
                                 </div>
                                 <div class="panel-body">
-                                    <!-- table -->
                                     <div class="panel panel-default">
 
                                         <div class="panel-body">
@@ -233,23 +226,13 @@ if(!isset($_SESSION["user"]))
 
                                         </div>
                                     </div>
-                                    <!-- end of table -->
                                 </div>
-
                             </div>
                         </div>
-
-
                     </div>
-
-
-
                 </div>
-                <!-- /. PAGE INNER  -->
             </div>
-            <!-- /. PAGE WRAPPER  -->
         </div>
-        <!-- /. WRAPPER  -->
         <!-- JS Scripts-->
         <!-- jQuery Js -->
         <script src="assets/js/jquery-1.10.2.js"></script>
