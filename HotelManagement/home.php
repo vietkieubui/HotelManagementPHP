@@ -87,7 +87,7 @@ ob_start();
                     <li>
                         <a href="billdetail.php"><i class="fas fa-money-bill"></i> Bill details</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </nav>
@@ -195,7 +195,6 @@ ob_start();
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- End  Basic Table  -->
                                             </div>
                                         </div>
                                     </div>
@@ -275,17 +274,9 @@ ob_start();
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- End  Basic Table  -->
                                             </div>
                                         </div>
                                     </div>
-
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -294,9 +285,6 @@ ob_start();
             </div>
         </div>
     </div>
-    <!-- /. PAGE INNER  -->
-    </div>
-
 
 
     <!-- /. WRAPPER  -->
