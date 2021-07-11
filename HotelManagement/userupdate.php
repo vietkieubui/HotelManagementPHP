@@ -67,8 +67,8 @@ include ('db.php');
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" name='close' class="btn btn-default" data-dismiss="modal">Close</button>
 
+                            <input type="submit" name="close" value="Close" class="btn btn-default">
                             <input type="submit" name="update" value="Update" class="btn btn-primary">
                     </form>
 
