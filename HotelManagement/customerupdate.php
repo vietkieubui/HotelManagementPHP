@@ -6,12 +6,13 @@ if(!isset($_SESSION["user"]))
 }
 
 ob_start();
-?> 
+?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administrator</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/ava.ico" />
@@ -26,8 +27,9 @@ ob_start();
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
+
 <body>
-<?php
+    <?php
     include ('db.php'); 
 	$id =$_GET['id'];		
 	$selectsql ="SELECT* FROM customer WHERE customerID ='$id' ";
@@ -42,80 +44,85 @@ ob_start();
         $nationality = $trow['nationality'];
         $email = $trow['email'];
         $note = $trow['note'];	
-    }
-    
-			
+    }		
 ?>
-<div class="" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">                
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Update Customer Information</h4>
-                        </div>
-						<form method="post">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Customer Name</label>
-                                <input name="newcn"  class="form-control" value="<?php echo $customerName ?>" placeholder="Enter Customer Name">
-                            </div>
-						</div>
-						<div class="modal-body">
-                            <div class="form-group">
-                                <label>ID Card</label>
-                                <input name="newidc"  class="form-control" value="<?php echo $idCard ?>" placeholder="Enter ID Card">
-							</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Gender</label>
-                                <select name="newgd" class="form-control">
-                                    <option value="<?php echo $gender ?>"> <?php echo $gender ?></option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-							</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Address</label>
-                                <input name="newad"  class="form-control" value="<?php echo $address ?>" placeholder="Enter Address">
-							</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input name="newpn"  class="form-control" value="<?php echo $phoneNumber ?>" placeholder="Enter Phone Number">
-							</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nationality</label>
-                                <input name="newna"  class="form-control" value="<?php echo $nationality ?>" placeholder="Enter Nationality">
-							</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input name="newem"  class="form-control" value="<?php echo $email ?>" placeholder="Enter Email">
-							</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Note</label>
-                                <input name="newnote"  class="form-control" value="<?php echo $note ?>" placeholder="Enter Note">
-							</div>
-                        </div>
-										
-                        <div class="modal-footer">
-                            <button type="submit" name = "close" class="btn btn-default" data-dismiss="modal">Close</button>											
-                            <input type="submit" name="update" value="Update" class="btn btn-primary">
-                        </div>
-                        
-                    </div>
+    <div class="" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Update Customer Information</h4>
                 </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Customer Name</label>
+                            <input name="newcn" class="form-control" value="<?php echo $customerName ?>"
+                                placeholder="Enter Customer Name">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID Card</label>
+                            <input name="newidc" class="form-control" value="<?php echo $idCard ?>"
+                                placeholder="Enter ID Card">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select name="newgd" class="form-control">
+                                <option value="<?php echo $gender ?>"> <?php echo $gender ?></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input name="newad" class="form-control" value="<?php echo $address ?>"
+                                placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input name="newpn" class="form-control" value="<?php echo $phoneNumber ?>"
+                                placeholder="Enter Phone Number">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nationality</label>
+                            <input name="newna" class="form-control" value="<?php echo $nationality ?>"
+                                placeholder="Enter Nationality">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input name="newem" class="form-control" value="<?php echo $email ?>"
+                                placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Note</label>
+                            <input name="newnote" class="form-control" value="<?php echo $note ?>"
+                                placeholder="Enter Note">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" name="close" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" name="update" value="Update" class="btn btn-primary">
+                    </div>
+
             </div>
-            <?php
+        </div>
+    </div>
+    <?php
             
                     if(isset($_POST['close'])){
                         header("Location: customer.php");
@@ -144,6 +151,7 @@ ob_start();
 					}
 		    	?>
 
-            <!-- end of modal fade sửa khách hàng *chưa hoàn thành* -->
+    <!-- end of modal fade sửa khách hàng *chưa hoàn thành* -->
 </body>
+
 </html>

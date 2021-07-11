@@ -34,7 +34,6 @@
 </head>
 
 <body onload="loadData()">
-    <!-- wrapper -->
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -62,12 +61,9 @@
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -93,9 +89,6 @@
                 </ul>
             </div>
         </nav>
-        <!-- từ đây trở lên là phần chung tất cả các trang chú ý class active-menu-->
-        <!-- /. NAV SIDE  -->
-        <!-- đây là phần body chính -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -105,9 +98,7 @@
                         </h1>
                     </div>
                 </div>
-                <!-- /. ROW  -->
                 <?php
-                // kiểm tra số khách hàng
 						include ('db.php');
 						$sql = "select * from customer";
 						$result = mysqli_query($conn,$sql);
@@ -117,7 +108,6 @@
 								$c+=1;						
 						}
 				?>
-                <!-- in ra bảng -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel-body">
@@ -155,7 +145,6 @@
                                                                     <th>Remove</th>
                                                                 </tr>
                                                             </thead>
-                                                            <!-- start thân bảng -->
                                                             <tbody>
                                                                 <?php
                                                                     $tsql = "select * from customer";
@@ -188,15 +177,12 @@
                                                                     }
                                                                 ?>
                                                             </tbody>
-                                                            <!-- end THân bảng -->
                                                         </table>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Kết thúc in ra bảng -->
-                                    <!-- modal fade thêm khách hàng-->
                                     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
                                         aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -299,19 +285,14 @@
                                             }
                                         ?>
                                     </div>
-                                    <!-- end of modal fade thêm khách hàng *đã hoàn thành*-->
                                 </div>
-
                             </div>
-                            <!-- /. PAGE WRAPPER  -->
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js">

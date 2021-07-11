@@ -31,7 +31,6 @@ ob_start();
 </head>
 
 <body>
-    <!-- wrapper -->
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -59,12 +58,9 @@ ob_start();
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -92,9 +88,6 @@ ob_start();
                 </ul>
             </div>
         </nav>
-        <!-- từ đây trở lên là phần chung tất cả các trang chú ý class active-menu-->
-        <!-- /. NAV SIDE  -->
-        <!-- đây là phần body chính -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -104,8 +97,6 @@ ob_start();
                         </h1>
                     </div>
                 </div>
-                <!-- /. ROW  -->
-                <!-- count row not checked -->
                 <div class="row">
                     <?php
                         include('db.php');
@@ -126,9 +117,9 @@ ob_start();
 
                                                 <a data-parent="#accordion" href="#collapseOne" data-toggle="collapse"
                                                     role="button" aria-expanded="false" aria-controls="collapseOne">
-                                                    <button class="btn btn-default collapsed" type="button" data-toggle="collapse"
-                                                        data-target="#collapseOne" aria-expanded="false"
-                                                        aria-controls="collapseOne">
+                                                    <button class="btn btn-default collapsed" type="button"
+                                                        data-toggle="collapse" data-target="#collapseOne"
+                                                        aria-expanded="false" aria-controls="collapseOne">
                                                         Online Bookings not checked yet <span
                                                             class="badge"><?php echo $c_not_checked?></span>
                                                     </button>
@@ -198,7 +189,6 @@ ob_start();
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- End  Basic Table  -->
                                             </div>
                                         </div>
                                     </div>
@@ -244,7 +234,7 @@ ob_start();
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <?php
+                                                                    <?php
                                                                     include('db.php');
                                                                     $select_online_booked_checked = "SELECT customer.customerID, customer.customerName, prebook.phoneNumber,customer.idCard, prebook.type,prebook.bedding, prebook.numroom, prebook.checkIn,prebook.checkOut,prebook.note FROM `prebook`,`customer` WHERE customer.customerID = prebook.customerID AND prebook.status = 'checked'";
                                                                     $select_online_booked_checked_result = mysqli_query($conn,$select_online_booked_checked);
@@ -273,24 +263,16 @@ ob_start();
                                                                             </tr>";
                                                                         }									
                                                                     ?>
-                                                                    
+
 
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- End  Basic Table  -->
                                             </div>
                                         </div>
                                     </div>
-
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -299,12 +281,6 @@ ob_start();
             </div>
         </div>
     </div>
-    <!-- /. PAGE INNER  -->
-    </div>
-
-
-
-    <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
