@@ -142,7 +142,6 @@
                                                                     <th>Details</th>
                                                                 </tr>
                                                             </thead>
-                                                            <!-- start thân bảng -->
                                                             <tbody>
                                                                 <?php
                                                                     $get_bill_infor = "SELECT bill.registerID, bill.billID, customer.customerName, customer.idCard, customer.phoneNumber, bill.roomcharge, bill.servicecharge, bill.subTotal, bill.vat,bill.total FROM `bill`, `registrationform`,`customer` WHERE bill.registerID = registrationform.registerID AND registrationform.customerID = customer.customerID AND registrationform.note ='paid'";
