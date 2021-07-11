@@ -98,11 +98,10 @@
                             Bill Details
                         </h1>
                     </div>
-                </div>
-                <!-- /. ROW  -->
+                </div>  
                 <?php
 						include ('db.php');
-						$sql = "SELECT bill.billID, customer.customerName, customer.idCard, customer.phoneNumber, bill.roomcharge, bill.servicecharge, bill.subTotal, bill.vat,bill.total FROM `bill`, `registrationform`,`customer` WHERE bill.registerID = registrationform.registerID AND registrationform.customerID = customer.customerID";
+						$sql = "SELECT bill.billID, customer.customerName, customer.idCard, customer.phoneNumber, bill.roomcharge, bill.servicecharge, bill.subTotal, bill.vat,bill.total FROM `bill`, `registrationform`,`customer` WHERE bill.registerID = registrationform.registerID AND registrationform.customerID = customer.customerID AND registrationform.note ='paid'";
 						$result = mysqli_query($conn,$sql);
 						$c = 0;
 						while($row=mysqli_fetch_array($result) )
@@ -146,7 +145,7 @@
                                                             <!-- start thân bảng -->
                                                             <tbody>
                                                                 <?php
-                                                                    $get_bill_infor = "SELECT bill.registerID, bill.billID, customer.customerName, customer.idCard, customer.phoneNumber, bill.roomcharge, bill.servicecharge, bill.subTotal, bill.vat,bill.total FROM `bill`, `registrationform`,`customer` WHERE bill.registerID = registrationform.registerID AND registrationform.customerID = customer.customerID";
+                                                                    $get_bill_infor = "SELECT bill.registerID, bill.billID, customer.customerName, customer.idCard, customer.phoneNumber, bill.roomcharge, bill.servicecharge, bill.subTotal, bill.vat,bill.total FROM `bill`, `registrationform`,`customer` WHERE bill.registerID = registrationform.registerID AND registrationform.customerID = customer.customerID AND registrationform.note ='paid'";
                                                                     $get_bill_infor_result = mysqli_query($conn,$get_bill_infor);
                                                                     while($trow=mysqli_fetch_array($get_bill_infor_result) )
                                                                     {
