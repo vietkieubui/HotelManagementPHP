@@ -28,6 +28,7 @@ include('db.php');
     <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
     <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link href="assets/css/new-style.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
     <!--fonts-->
@@ -51,7 +52,7 @@ include('db.php');
                 <li><i class="fa fa-envelope" aria-hidden="true"></i><a
                         href="mailto:Kieustudying@gmail.com">Kieustudying@gmail.com</a></li>
                 <li><i class="fa fa-phone" aria-hidden="true"></i>+84 911079861</li>
-                
+
             </ul>
         </div>
         <div class="clearfix"></div>
@@ -474,7 +475,7 @@ include('db.php');
         </div>
     </div>
     <!--// rooms & rates -->
-    
+
     <!-- contact -->
     <section class="contact-w3ls" id="contact">
         <div class="container">
@@ -494,7 +495,7 @@ include('db.php');
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
-                
+
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3151200685425!2d105.79349141493185!3d20.980001786024822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc51191abcb%3A0x47247696a51de226!2zMTQxIENoaeG6v24gVGjhuq9uZywgVMOibiBUcmnhu4F1LCBIw6AgxJDDtG5nLCBIw6AgTuG7mWk!5e0!3m2!1sen!2s!4v1625664721742!5m2!1sen!2s"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -622,6 +623,10 @@ include('db.php');
         });
     });
     </script>
+    <div>
+        <a href="reservation.php"> <img class="book-room-fixed" id="shake" style="height: 45px; width: auto; border-radius: 15px; position: fixed;top: 600px; right: 0px;" src="images/ReserveNowButton2.png"></a>
+
+    </div>
 
     <div class="arr-w3ls">
         <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
