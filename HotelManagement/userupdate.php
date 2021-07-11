@@ -67,7 +67,7 @@ include ('db.php');
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" name='close' class="btn btn-default" data-dismiss="modal">Close</button>
 
                             <input type="submit" name="update" value="Update" class="btn btn-primary">
                     </form>
@@ -88,10 +88,10 @@ include ('db.php');
 			    echo' <script language="javascript" type="text/javascript"> alert("User name and password update") </script>';
                 header("Location: usersetting.php");
 			}
-		
-		
-		
-		}
+		}elseif(isset($_POST['close'])){
+            header("Location: usersetting.php");
+        }
+
 	?>
     <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
