@@ -144,29 +144,28 @@
                                     </thead>
                                     <tbody>
                                         <?php 
-                                                                    $service_info = "SELECT service.serviceName, service.price, serviceregistration.amount, serviceregistration.total FROM serviceregistration, registrationform, service WHERE registrationform.registerID ='$id' AND registrationform.registerID = serviceregistration.registerID AND service.serviceID = serviceregistration.serviceID";
-                                                                    $service_infor_result = mysqli_query($conn,$service_info);
-                                                                    $sum_service_total = 0;
-                                                                    while($service_infor_row = mysqli_fetch_array($service_infor_result) )
-                                                                    {
-                                                                        
-                                                                        $servicename = $service_infor_row['serviceName'];
-                                                                        $service_price = $service_infor_row['price'];
-                                                                        $amount = $service_infor_row['amount'];
-                                                                        $service_total = $service_infor_row['total'];
-                                                                        $sum_service_total += $service_total;
-                                                                        								
-                                                                        echo"<tr>
-                                                                            <td>".$servicename."</td>
-                                                                            <td>".$service_price."</td>
-                                                                            <td>".$amount."</td>
-                                                                            <td>".$service_total."</td>
-                                                                            </tr>";                                                                   }
-                                                                ?>
+                                            $service_info = "SELECT service.serviceName, service.price, serviceregistration.amount, serviceregistration.total FROM serviceregistration, registrationform, service WHERE registrationform.registerID ='$id' AND registrationform.registerID = serviceregistration.registerID AND service.serviceID = serviceregistration.serviceID";
+                                            $service_infor_result = mysqli_query($conn,$service_info);
+                                            $sum_service_total = 0;
+                                            while($service_infor_row = mysqli_fetch_array($service_infor_result) )
+                                            {
+                                                
+                                                $servicename = $service_infor_row['serviceName'];
+                                                $service_price = $service_infor_row['price'];
+                                                $amount = $service_infor_row['amount'];
+                                                $service_total = $service_infor_row['total'];
+                                                $sum_service_total += $service_total;
+                                                                                
+                                                echo"<tr>
+                                                    <td>".$servicename."</td>
+                                                    <td>".$service_price."</td>
+                                                    <td>".$amount."</td>
+                                                    <td>".$service_total."</td>
+                                                    </tr>";                                                                   }
+                                        ?>
                                     </tbody>
-                                    <!-- end THân bảng -->
                                 </table>
-                            </div><!-- Kết thúc in ra bảng 2-->
+                            </div>
                         </div>
                         <div style="display: flex; flex-direction: column; margin: 0 20px 10px 0; text-align: right">
                             <div style="flex:6; padding-left:46%; content: auto">Room Total:
@@ -193,7 +192,6 @@
                 </div>
             </div>
         </div>
-        <!-- /. PAGE INNER  -->
     </div>
 </body>
 

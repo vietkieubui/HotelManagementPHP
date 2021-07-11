@@ -123,33 +123,32 @@ ob_start();
         </div>
     </div>
     <?php
-            
-                    if(isset($_POST['close'])){
-                        header("Location: customer.php");
-                    }
-					if(isset($_POST['update']))
-					{
-                           
-						$newcname = $_POST['newcn'];                            
-						$newcidcard = $_POST['newidc'];
-                        $newcgender = $_POST['newgd'];
-                        $newcaddress = $_POST['newad'];
-                        $newcphonenumber = $_POST['newpn'];
-                        $newcnationality = $_POST['newna'];
-                        $newcemail = $_POST['newem'];
-						$newcnote = $_POST['newnote'];
+        if(isset($_POST['close'])){
+            header("Location: customer.php");
+        }
+        if(isset($_POST['update']))
+        {
+                
+            $newcname = $_POST['newcn'];                            
+            $newcidcard = $_POST['newidc'];
+            $newcgender = $_POST['newgd'];
+            $newcaddress = $_POST['newad'];
+            $newcphonenumber = $_POST['newpn'];
+            $newcnationality = $_POST['newna'];
+            $newcemail = $_POST['newem'];
+            $newcnote = $_POST['newnote'];
 
-						$newsql ="UPDATE customer SET customerName = '$newcname', idCard = '$newcidcard', gender= '$newcgender', address = '$newcaddress', phoneNumber = '$newcphonenumber', nationality= '$newcnationality', email= '$newcemail', note= '$newcnote' WHERE customerID='$customerID'";
-						
-                            
-                        if(mysqli_query($conn,$newsql))
-						{
-						    echo' <script language="javascript" type="text/javascript"> alert("Update thành công") </script>';
-                        }
-                        header("Location: customer.php"); 
-                        
-					}
-		    	?>
+            $newsql ="UPDATE customer SET customerName = '$newcname', idCard = '$newcidcard', gender= '$newcgender', address = '$newcaddress', phoneNumber = '$newcphonenumber', nationality= '$newcnationality', email= '$newcemail', note= '$newcnote' WHERE customerID='$customerID'";
+            
+                
+            if(mysqli_query($conn,$newsql))
+            {
+                echo' <script language="javascript" type="text/javascript"> alert("Update thành công") </script>';
+            }
+            header("Location: customer.php"); 
+            
+        }
+    ?>
 </body>
 
 </html>

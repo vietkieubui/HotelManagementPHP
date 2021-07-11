@@ -60,13 +60,10 @@ ob_start();
                         <li class="divider"></li>
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
+                    </ul>                    
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -92,9 +89,6 @@ ob_start();
                 </ul>
             </div>
         </nav>
-        <!-- từ đây trở lên là phần chung tất cả các trang chú ý class active-menu-->
-        <!-- /. NAV SIDE  -->
-        <!-- đây là phần body chính -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -104,7 +98,6 @@ ob_start();
                         </h1>
                     </div>
                 </div>
-                <!-- /. ROW  -->
                 <div class="row">
                     <?php 
                     include('db.php');
@@ -156,7 +149,6 @@ ob_start();
                     <br>
                     <div id="chart"></div>
                     <div class="col-md-12">
-                        <!-- Advanced Tables -->
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="table-responsive">
@@ -227,19 +219,17 @@ ob_start();
 
                             </div>
                         </div>
-                        <!--End Advanced Tables -->
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <!-- /. PAGE INNER  -->
     </div>
 
 
 
-    <!-- /. WRAPPER  -->
+   
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
