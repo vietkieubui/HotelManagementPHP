@@ -4,6 +4,5 @@
 	$newsql ="UPDATE `prebook` SET `status`='checked' WHERE customerID ='$id' AND status != 'checked'";
 	if(mysqli_query($conn,$newsql))
 	{}
-	header("Location: checkonlinebooking.php");
-		
+	header("Location: checkonlinebooking.php");		
 ?>

@@ -53,7 +53,6 @@
 </head>
 
 <body>
-    <!-- wrapper -->
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -81,12 +80,9 @@
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -115,9 +111,6 @@
                 </ul>
             </div>
         </nav>
-        <!-- từ đây trở lên là phần chung tất cả các trang chú ý class active-menu-->
-        <!-- /. NAV SIDE  -->
-        <!-- đây là phần body chính -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -128,9 +121,6 @@
                     </div>
 
                 </div>
-                <!-- /. ROW  -->
-
-                <!-- in ra bảng -->
                 <div class="row">
                     <div class="col-md-12">
 
@@ -195,7 +185,6 @@
                                                                         <th>Total</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <!-- start thân bảng -->
                                                                 <tbody>
                                                                     <?php 
                                                                     $room_infor = "SELECT roomregistration.roomID, room.price, registrationform.checkIn, registrationform.checkOut, registrationform.days FROM registrationform, roomregistration,room WHERE registrationform.registerID ='$id' AND registrationform.registerID = roomregistration.registerID AND roomregistration.roomID = room.roomID";
@@ -221,9 +210,8 @@
                                                                     }
                                                                 ?>
                                                                 </tbody>
-                                                                <!-- end THân bảng -->
                                                             </table>
-                                                        </div><!-- Kết thúc in ra bảng 1-->
+                                                        </div>
                                                         <div class="table-responsive  col-md-5">
                                                             <table class="table">
                                                                 <thead>
@@ -234,7 +222,6 @@
                                                                         <th>Total</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <!-- start thân bảng -->
                                                                 <tbody>
                                                                     <?php 
                                                                     $service_info = "SELECT service.serviceName, service.price, serviceregistration.amount, serviceregistration.total FROM serviceregistration, registrationform, service WHERE registrationform.registerID ='$id' AND registrationform.registerID = serviceregistration.registerID AND service.serviceID = serviceregistration.serviceID";
@@ -257,9 +244,8 @@
                                                                             </tr>";                                                                   }
                                                                 ?>
                                                                 </tbody>
-                                                                <!-- end THân bảng -->
                                                             </table>
-                                                        </div><!-- Kết thúc in ra bảng 2-->
+                                                        </div>
                                                     </div>
                                                     <div style="display: flex">
                                                         <div style="flex:6; padding-left:46%; content: auto">Total:
@@ -298,9 +284,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- /. PAGE INNER  -->
                                 </div>
-                                <!-- /. PAGE WRAPPER  -->
                             </div>
 
 
@@ -335,8 +319,6 @@
                                 }
                             ?>
                         </div>
-
-
                     </div>
                 </div>
             </div>

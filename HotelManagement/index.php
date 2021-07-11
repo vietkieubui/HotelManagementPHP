@@ -26,7 +26,7 @@
                     <p><input type="submit" name="sub" value="Login"></p>
                 </fieldset>
             </form>
-        </div> <!-- end login -->
+        </div>
     </div>
 
 
@@ -59,4 +59,3 @@
     }
  }
 ?>
-<!-- xong phần đăng nhập -->

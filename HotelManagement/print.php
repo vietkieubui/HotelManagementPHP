@@ -105,35 +105,33 @@
                                             <th>Total</th>
                                         </tr>
                                     </thead>
-                                    <!-- start thân bảng -->
                                     <tbody>
                                         <?php 
-                                                                    $room_infor = "SELECT roomregistration.roomID, room.price, registrationform.checkIn, registrationform.checkOut, registrationform.days FROM registrationform, roomregistration,room WHERE registrationform.registerID ='$id' AND registrationform.registerID = roomregistration.registerID AND roomregistration.roomID = room.roomID";
-                                                                    $room_infor_result = mysqli_query($conn,$room_infor);
-                                                                    $room_total=0;
-                                                                    while($room_infor_row = mysqli_fetch_array($room_infor_result) )
-                                                                    {
-                                                                        $room_total += $room_infor_row['price'] * $room_infor_row['days']; 
-                                                                        $roomID = $room_infor_row['roomID'];
-                                                                        $room_price = $room_infor_row['price'];
-                                                                        $checkIn = $room_infor_row['checkIn'];
-                                                                        $checkOut = $room_infor_row['checkOut'];
-                                                                        $days = $room_infor_row['days'];
-                                                                        								
-                                                                        echo"<tr>
-                                                                            <td>".$roomID."</td>
-                                                                            <td>".$room_price."</td>
-                                                                            <td>".$checkIn."</td>
-                                                                            <td>".$checkOut."</td>
-                                                                            <td>".$days."</td>
-                                                                            <td>".$room_total."</td>
-                                                                            </tr>";
-                                                                    }
-                                                                ?>
+                                            $room_infor = "SELECT roomregistration.roomID, room.price, registrationform.checkIn, registrationform.checkOut, registrationform.days FROM registrationform, roomregistration,room WHERE registrationform.registerID ='$id' AND registrationform.registerID = roomregistration.registerID AND roomregistration.roomID = room.roomID";
+                                            $room_infor_result = mysqli_query($conn,$room_infor);
+                                            $room_total=0;
+                                            while($room_infor_row = mysqli_fetch_array($room_infor_result) )
+                                            {
+                                                $room_total += $room_infor_row['price'] * $room_infor_row['days']; 
+                                                $roomID = $room_infor_row['roomID'];
+                                                $room_price = $room_infor_row['price'];
+                                                $checkIn = $room_infor_row['checkIn'];
+                                                $checkOut = $room_infor_row['checkOut'];
+                                                $days = $room_infor_row['days'];
+                                                                                
+                                                echo"<tr>
+                                                    <td>".$roomID."</td>
+                                                    <td>".$room_price."</td>
+                                                    <td>".$checkIn."</td>
+                                                    <td>".$checkOut."</td>
+                                                    <td>".$days."</td>
+                                                    <td>".$room_total."</td>
+                                                    </tr>";
+                                            }
+                                        ?>
                                     </tbody>
-                                    <!-- end THân bảng -->
                                 </table>
-                            </div><!-- Kết thúc in ra bảng 1-->
+                            </div>
                             <div class="table-responsive  col-md-12">
                                 <table class="table">
                                     <thead>
@@ -144,7 +142,6 @@
                                             <th>Total</th>
                                         </tr>
                                     </thead>
-                                    <!-- start thân bảng -->
                                     <tbody>
                                         <?php 
                                                                     $service_info = "SELECT service.serviceName, service.price, serviceregistration.amount, serviceregistration.total FROM serviceregistration, registrationform, service WHERE registrationform.registerID ='$id' AND registrationform.registerID = serviceregistration.registerID AND service.serviceID = serviceregistration.serviceID";

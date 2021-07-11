@@ -31,7 +31,6 @@ ob_start();
 </head>
 
 <body>
-    <!-- wrapper -->
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -59,12 +58,9 @@ ob_start();
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -91,9 +87,6 @@ ob_start();
                 </ul>
             </div>
         </nav>
-        <!-- từ đây trở lên là phần chung tất cả các trang chú ý class active-menu-->
-        <!-- /. NAV SIDE  -->
-        <!-- đây là phần body chính -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -103,8 +96,6 @@ ob_start();
                         </h1>
                     </div>
                 </div>
-                <!-- /. ROW  -->
-                <!-- count row booked -->
                 <div class="row">
                     <?php
                         include('db.php');
