@@ -150,8 +150,6 @@ ob_start();
                         
 					}
 		    	?>
-
-    <!-- end of modal fade sửa khách hàng *chưa hoàn thành* -->
 </body>
 
 </html>
