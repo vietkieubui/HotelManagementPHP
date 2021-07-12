@@ -148,7 +148,8 @@ if(!isset($_SESSION["user"]))
                                                             <th>ID</th>
                                                             <th>Name</th>
                                                             <th>Price</th>
-                                                            <th>Note</th>
+                                                            <th>Note</th>                                                            
+                                                            <th>Update</th>                                                            
                                                             <th>Delete</th>
                                                         </tr>
                                                     </thead>
@@ -169,14 +170,14 @@ if(!isset($_SESSION["user"]))
 											    <th>".$servicename."</th>
 											    <th>".$serviceprice."</th>
 											    <th>".$servicenote."</th>											    	
-                                                <td><a href='servicedel.php?id=$serviceid'><button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete</button></a></td>										
+                                                <td><a href='serviceupdate.php?id=$serviceid'><button class='btn btn-primary'> <i class='fa fa-edit' ></i> Update</button></a></td>										
+                                                <td><a href='servicedel.php?id=$serviceid'><button class='btn btn-danger'> <i class='far fa-trash-alt'></i> Delete</button></a></td>										
 											    </tr>";
 										}
 									?>
                                                     </tbody>
                                                 </table>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
