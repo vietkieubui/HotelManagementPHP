@@ -143,7 +143,7 @@ ob_start();
                 
             if(mysqli_query($conn,$newsql))
             {
-                echo' <script language="javascript" type="text/javascript"> alert("Update thành công") </script>';
+                echo' <script language="javascript" type="text/javascript"> alert("Update success") </script>';
             }
             header("Location: customer.php"); 
             

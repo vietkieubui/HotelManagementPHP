@@ -17,6 +17,9 @@ if(!isset($_SESSION["user"]))
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Morris Chart Styles-->
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
@@ -68,12 +71,7 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a class="" href="service.php"><i class="fa fa-plus-circle"></i>Add Service</a>
                     </li>
-
-
-
-
             </div>
-
         </nav>
 
 
@@ -89,7 +87,7 @@ if(!isset($_SESSION["user"]))
 
 
                 <div class="row">
-                    <div class="col-md-5 col-sm-5">
+                    <div class="col-md-4 col-sm-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 ADD NEW ROOM
@@ -172,33 +170,33 @@ if(!isset($_SESSION["user"]))
                     </div>
 
 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    ROOMS INFORMATION
-                                </div>
-                                <div class="panel-body">
-                                    <div class="panel panel-default">
+                    <div class="col-md-7 col-sm-7">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                ROOMS INFORMATION
+                            </div>
+                            <div class="panel-body">
+                                <div class="panel panel-default">
 
-                                        <div class="panel-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-bordered table-hover"
-                                                    id="dataTables-example">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>ID</th>
-                                                            <th>Type</th>
-                                                            <th>Bedding</th>
-                                                            <th>Price</th>
-                                                            <th>Status</th>
-                                                            <th>Note</th>
-                                                            <th>Delete</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover"
+                                                id="dataTables-example">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Type</th>
+                                                        <th>Bedding</th>
+                                                        <th>Price</th>
+                                                        <th>Status</th>
+                                                        <th>Note</th>
+                                                        <th>Update</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
 
-                                                        <?php                                    
+                                                    <?php                                    
                                         $sql = "select * from room";
                                         $result = mysqli_query($conn,$sql);                                    
 										while($row= mysqli_fetch_array($result))
@@ -216,20 +214,120 @@ if(!isset($_SESSION["user"]))
 											    <th>".$roomprice."</th>
 											    <th>".$roomstatus."</th>
 											    <th>".$roomnote."</th>	
-                                                <td><a href='roomdel.php?id=$roomid'><button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete</button></a></td>										
+                                                <td><a href='roomupdate.php?id=$roomid'><button class='btn btn-primary'> <i class='fa fa-edit' ></i> Update</button></a></td>										
+                                                <td><a href='roomdel.php?id=$roomid'><button class='btn btn-danger'> <i class='far fa-trash-alt'></i> Delete</button></a></td>										
 											    </tr>";
 										}
 									?>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
+                                                </tbody>
+                                            </table>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Add New Customer</h4>
+                                        </div>
+                                        <form method="post">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Customer Name</label>
+                                                    <input name="newcn" class="form-control" id="name123"
+                                                        placeholder="Enter Customer Name">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>ID Card</label>
+                                                    <input name="newidc" class="form-control" id="idc"
+                                                        placeholder="Enter ID Card">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Gender</label>
+                                                    <select name="newgd" class="form-control">
+                                                        <option value="male">Male</option>
+                                                        <option value="female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Address</label>
+                                                    <input name="newad" class="form-control" id="province"
+                                                        placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Phone Number</label>
+                                                    <input name="newpn" class="form-control" id="phone"
+                                                        placeholder="Enter Phone Number">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Nationality</label>
+                                                    <input name="newna" class="form-control" id="Vietnamese"
+                                                        placeholder="Enter Nationality">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input name="newem" class="form-control" placeholder="Enter Email">
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Note</label>
+                                                    <input name="newnote" class="form-control" placeholder="Enter Note">
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                                <input type="submit" name="addnew" value="Add" class="btn btn-primary">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <?php
+                                    if(isset($_POST['addnew']))
+                                    {
+                                            
+                                        $newcname = $_POST['newcn'];                            
+                                        $newcidcard = $_POST['newidc'];
+                                        $newcgender = $_POST['newgd'];
+                                        $newcaddress = $_POST['newad'];
+                                        $newcphonenumber = $_POST['newpn'];
+                                        $newcnationality = $_POST['newna'];
+                                        $newcemail = $_POST['newem'];
+                                        $newcnote = $_POST['newnote'];
+
+                                        $newsql ="INSERT INTO customer(customerName, idCard, gender, address, phoneNumber, nationality, email, note) VALUES ('$newcname','$newcidcard','$newcgender','$newcaddress','$newcphonenumber','$newcnationality','$newcemail','$newcnote')";
+                                        echo $newsql;
+                                            
+                                        if(mysqli_query($conn,$newsql))
+                                        {
+                                            echo "<script language='javascript' type='text/javascript'> alert('Add customer success!') </script>";
+                                        }
+                                        header("Location: customer.php");
+                                    }
+                                ?>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -244,12 +342,12 @@ if(!isset($_SESSION["user"]))
         <script src="assets/js/custom-scripts.js"></script>
         <!-- DATA TABLE SCRIPTS -->
         <script src="assets/js/dataTables/jquery.dataTables.js"></script>
-            <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
-            <script>
-            $(document).ready(function() {
-                $('#dataTables-example').dataTable();
-            });
-            </script>
+        <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#dataTables-example').dataTable();
+        });
+        </script>
 
 
 </body>

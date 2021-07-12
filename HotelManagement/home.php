@@ -134,18 +134,18 @@ ob_start();
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>registerID</th>
-                                                                        <th>customerID</th>
-                                                                        <th>customerName</th>
-                                                                        <th>IDCard</th>
-                                                                        <th>PhoneNumber</th>
-                                                                        <th>CheckIn</th>
-                                                                        <th>CheckOut</th>
-                                                                        <th>RoomID</th>
-                                                                        <th>Status</th>
-                                                                        <th>Note</th>
-                                                                        <th>Action</th>
-                                                                        <th>Cancel</th>
+                                                                        <th style="padding-right:0">registerID</th>
+                                                                        <th style="padding-right:0">customerID</th>
+                                                                        <th style="padding-right:0">customerName</th>
+                                                                        <th style="padding-right:0">IDCard</th>
+                                                                        <th style="padding-right:0">PhoneNumber</th>
+                                                                        <th style="padding-right:0">CheckIn</th>
+                                                                        <th style="padding-right:0">CheckOut</th>
+                                                                        <th style="padding-right:0">RoomID</th>
+                                                                        <th style="padding-right:0">Note</th>
+                                                                        <th style="padding-right:0">Service</th>
+                                                                        <th style="padding-right:0">Check In</th>
+                                                                        <th style="padding-right:0">Cancel</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -174,8 +174,8 @@ ob_start();
                                                                                 <th>".$checkIn_booked."</th>	
                                                                                 <th>".$checkOut_booked."</th>
                                                                                 <th>".$roomID_booked."</th>
-                                                                                <th>".$status_booked."</th>
                                                                                 <th>".$note_booked."</th>
+                                                                                <td><a href='usingservice.php?id=$registerID_booked'><button class='btn btn-primary'> <i class='fas fa-concierge-bell'></i></button></a></td>
                                                                                 <td><a href='checkin.php?id=$roomID_booked'><button class='btn btn-primary'> <i class='fas fa-check' ></i> CheckIn</button></a></td>	
                                                                                 <td><a href='cancelroom.php?id=$roomID_booked'><button class='btn btn-danger'> <i class='fas fa-times'></i> Cancel</button></a></td>										
                                                                                 </tr>";
