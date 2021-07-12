@@ -484,7 +484,7 @@ include('db.php');
                 <p class="contact-agile1"><strong>Phone :</strong>+84 911079861</p>
                 <p class="contact-agile1"><strong>Email :</strong> <a
                         href="mailto:Kieustudying@gmail.com">Kieustudying@gmail.com</a></p>
-                <p class="contact-agile1"><strong>Address :</strong> 141 Chiến Thắng, Tân Triều, Thanh Trì, Hà Nội</p>
+                <p class="contact-agile1"><strong>Address :</strong> 36-38 Đ. Lâm Hoành, Phước Mỹ, Sơn Trà, Đà Nẵng</p>
 
                 <div class="social-bnr-agileits footer-icons-agileinfo">
                     <ul class="social-icons3">
@@ -496,9 +496,7 @@ include('db.php');
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3151200685425!2d105.79349141493185!3d20.980001786024822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc51191abcb%3A0x47247696a51de226!2zMTQxIENoaeG6v24gVGjhuq9uZywgVMOibiBUcmnhu4F1LCBIw6AgxJDDtG5nLCBIw6AgTuG7mWk!5e0!3m2!1sen!2s!4v1625664721742!5m2!1sen!2s"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15336.249768810167!2d108.2452392!3d16.0622492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x22e751e30a3a2ba8!2sSala%20Danang%20Beach%20Hotel!5e0!3m2!1sen!2s!4v1626084303159!5m2!1sen!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="clearfix"></div>
         </div>
