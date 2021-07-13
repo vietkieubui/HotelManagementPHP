@@ -117,7 +117,7 @@
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
                                             <div>
-                                                List Customer <span class="badge"><?php echo $c ; ?></span>
+                                                List Bill <span class="badge"><?php echo $c ; ?></span>
                                             </div>
                                         </h4>
                                     </div>

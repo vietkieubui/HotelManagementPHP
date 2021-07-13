@@ -183,6 +183,108 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+                                        aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Add New Customer</h4>
+                                                </div>
+                                                <form method="post">
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Customer Name</label>
+                                                            <input name="newcn" class="form-control" id="name123"
+                                                                placeholder="Enter Customer Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>ID Card</label>
+                                                            <input name="newidc" class="form-control" id="idc"
+                                                                placeholder="Enter ID Card">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Gender</label>
+                                                            <select name="newgd" class="form-control">
+                                                                <option value="male">Male</option>
+                                                                <option value="female">Female</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Address</label>
+                                                            <input name="newad" class="form-control" id="province"
+                                                                placeholder="Enter Address">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Phone Number</label>
+                                                            <input name="newpn" class="form-control" id="phone"
+                                                                placeholder="Enter Phone Number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Nationality</label>
+                                                            <input name="newna" class="form-control" id="Vietnamese"
+                                                                placeholder="Enter Nationality">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Email</label>
+                                                            <input name="newem" class="form-control"
+                                                                placeholder="Enter Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label>Note</label>
+                                                            <input name="newnote" class="form-control"
+                                                                placeholder="Enter Note">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                            data-dismiss="modal">Close</button>
+                                                        <input type="submit" name="addnew" value="Add"
+                                                            class="btn btn-primary">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <?php
+                                            if(isset($_POST['addnew']))
+                                            {
+                                                    
+                                                $newcname = $_POST['newcn'];                            
+                                                $newcidcard = $_POST['newidc'];
+                                                $newcgender = $_POST['newgd'];
+                                                $newcaddress = $_POST['newad'];
+                                                $newcphonenumber = $_POST['newpn'];
+                                                $newcnationality = $_POST['newna'];
+                                                $newcemail = $_POST['newem'];
+                                                $newcnote = $_POST['newnote'];
+
+                                                $newsql ="INSERT INTO customer(customerName, idCard, gender, address, phoneNumber, nationality, email, note) VALUES ('$newcname','$newcidcard','$newcgender','$newcaddress','$newcphonenumber','$newcnationality','$newcemail','$newcnote')";
+                                                echo $newsql;
+                                                    
+                                                if(mysqli_query($conn,$newsql))
+                                                {
+                                                    echo "<script language='javascript' type='text/javascript'> alert('Add customer success!') </script>";
+                                                }
+                                                header("Location: customer.php");
+                                            }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
